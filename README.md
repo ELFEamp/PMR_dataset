@@ -4,7 +4,7 @@ Dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folde
 ### Data Format
 ```
 {
-        "annot_id": "train-98",
+        "total_id": 98,
         # Name of movie which the image is from.
 	"movie": "3051_NANNY_MCPHEE_RETURNS",
   
@@ -13,6 +13,9 @@ Dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folde
   
 	# Path of the image
 	"img_fn": "lsmdc_3051_NANNY_MCPHEE_RETURNS/3051_NANNY_MCPHEE_RETURNS_01.19.27.912-01.19.30.662@0.jpg",
+	
+	# Id of the image
+	"img_id": "train-5244",
   
 	# Path of the file storing the information of bounding boxes
 	"metadata_fn": "lsmdc_3051_NANNY_MCPHEE_RETURNS/3051_NANNY_MCPHEE_RETURNS_01.19.27.912-01.19.30.662@0.json",
@@ -36,5 +39,11 @@ Dataset can be downloaded at [Google Drive](https://drive.google.com/drive/folde
   
 	# The index of the correct answer in answer_choices.
 	"answer_label": 0
+	
+	# For original set, the total_id of the sample that has the same image as the current sample if it exists.(-1 is the default)
+	"pal_id":-1
+	
+	# For adversarial set, the list of total_id which the four choices are from.
+	"answer_ori_ids":[14097, 12681, 387, 13170]
 }
 ```
